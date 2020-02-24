@@ -1,3 +1,8 @@
+/////////Steven Glasford
+/////////Organization and Architecture CSC374
+/////////Assignment 1
+/////////Due 2-26-2020
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -18,7 +23,7 @@ int* sortArrayByParity(int* A, int ASize, int* returnSize){
 	//print out the input
 	printf("Input: [ ");
 	for (i = 0; i < ASize; i++){
-		printf("%d, ",A[i]);
+		printf("%d ",A[i]);
 	}
 	printf("]\n");
 
@@ -40,7 +45,7 @@ int* sortArrayByParity(int* A, int ASize, int* returnSize){
 	//print out the output in a nice to see method
 	printf("Output: [ ");
 	for (i = 0; i < ASize; i++){
-		printf("%d, ", B[i]);
+		printf("%d ", B[i]);
 	}
 	printf("]\n");
 
@@ -195,7 +200,7 @@ int main(){
 	revHead = reverseList(&ll1);
 
 	//print out the output list
-	printf("Output: [ ");
+	printf("Reverse of the input\nOutput: [ ");
 	printListy(revHead);
 	printf(" ]\n");
 	return 0;
