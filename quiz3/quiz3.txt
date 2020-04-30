@@ -1,0 +1,35 @@
+This program was extremely simple for me to make and run.
+
+Because I am using Arch linux almost all of my programs
+are already compiled from C code to machien code through
+my package manager pacman. Pacman also supports
+multi threading to compile faster using OpenMP. This means
+my computer basically required zero input and zero setup
+in order to run.
+
+To do this assignment I opened up nano and wrote the
+following:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <omp.h>
+
+int main(){
+	#pragma omp parallel
+	{
+		printf("Hello... Bitches from: %d\n", omp_get_thread_num());
+	}
+	return 0;
+}
+
+To compile this program I ran the following command in the
+terminal:
+
+gcc -o quiz3.o -fopenmp quiz3.c
+
+The following is the output I get from running quiz3.o:
+
+Hello... Bitches from: 0
+Hello... Bitches from: 1
+Hello... Bitches from: 3
+Hello... Bitches from: 2
